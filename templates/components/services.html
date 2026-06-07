@@ -1,0 +1,34 @@
+<section id="services" class="py-20 md:py-28 px-6" style="background-color: {{ site.colors.text_dark }};">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: {{ site.colors.accent }};">{{ services.section_label }}</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: {{ site.colors.background }};">{{ services.title }}</h2>
+      <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed" style="color: {{ site.colors.text_light }};">{{ services.subtitle }}</p>
+    </div>
+    <div class="fade-up grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+      <div class="md:order-2">
+        <div class="relative aspect-square rounded-3xl overflow-hidden">
+          <img src="{{ site.images.services_photo }}" alt="Hannah working" loading="lazy" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="md:order-1">
+        <div class="space-y-4" style="color: {{ site.colors.text_light }};">
+          {% for paragraph in services.description_paragraphs %}
+          <p class="text-base leading-relaxed">{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="fade-up grid md:grid-cols-3 gap-6">
+      {% for service in services.services %}
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="{{ service.icon }}" style="width:28px;height:28px;color:{{ site.colors.accent }};"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: {{ site.colors.background }};">{{ service.title }}</h3>
+        <p class="text-sm leading-relaxed" style="color: {{ site.colors.text_light }};">{{ service.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

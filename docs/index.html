@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Sector Solutions with Hannah</title>
+  <meta name="description" content="Charity Consultancy">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .font-heading { font-family: 'DM Serif Display', serif; }
+    .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .offering-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .offering-card:hover {
+      transform: translateY(-6px);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .blob-shape {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: morphBlob 8s ease-in-out infinite;
+    }
+    @keyframes morphBlob {
+      0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    }
+    .dot-pattern {
+      background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="h-full font-body" style="background-color: #FDF8F4;">
+  <div id="app-wrapper" class="w-full h-full overflow-auto">
+    
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color: #FDF8F4E6; backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div></div>
+    <div class="hidden md:flex items-center gap-8">
+      
+      <a href="#about-me" class="nav-link text-sm font-medium" style="color: #5A7C6B;">What Made Me</a>
+      
+      <a href="#services" class="nav-link text-sm font-medium" style="color: #5A7C6B;">What I Do</a>
+      
+      <a href="#current-work" class="nav-link text-sm font-medium" style="color: #5A7C6B;">Currently Working On</a>
+      
+      <a href="#offerings" class="nav-link text-sm font-medium" style="color: #5A7C6B;">What I Can Do</a>
+      
+      <a href="#contact" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105" style="background-color: #2D6A4F; color: #FDF8F4;">Get in Touch</a>
+    </div>
+    <button id="mobile-toggle" class="md:hidden p-2 rounded-lg" style="color: #1B3A2D;">
+      <i data-lucide="menu" style="width:24px;height:24px;"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+    <div class="flex flex-col gap-3 pt-2 border-t" style="border-color: #E8DDD4;">
+      
+      <a href="#about-me" class="text-sm font-medium py-2" style="color: #5A7C6B;">What Made Me</a>
+      
+      <a href="#services" class="text-sm font-medium py-2" style="color: #5A7C6B;">What I Do</a>
+      
+      <a href="#current-work" class="text-sm font-medium py-2" style="color: #5A7C6B;">Currently Working On</a>
+      
+      <a href="#offerings" class="text-sm font-medium py-2" style="color: #5A7C6B;">What I Can Do</a>
+      
+      <a href="#contact" class="text-sm font-medium py-2" style="color: #2D6A4F;">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+<header class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 overflow-hidden">
+  <div class="absolute top-20 right-0 w-72 h-72 blob-shape opacity-20" style="background-color: #2D6A4F;"></div>
+  <div class="absolute bottom-0 left-10 w-40 h-40 blob-shape opacity-10" style="background-color: #D4A574;"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="max-w-2xl">
+        <div class="mb-8 flex justify-start">
+          <img src="https://res.cloudinary.com/drzhhb3qn/image/upload/v1774262526/Social_sector_solutions_with_Hannah_logo_netwfb.png" alt="Social Sector Solutions with Hannah Logo" loading="lazy" style="height: 120px; width: auto;">
+        </div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style="background-color: #E8F5EE; color: #2D6A4F;">
+          <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+          <span class="text-xs font-semibold tracking-wide uppercase">Charity Consultancy</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-6xl leading-tight mb-6" style="color: #1B3A2D;">Helping Charities Thrive & Make Real Impact</h1>
+        <p class="text-lg md:text-xl leading-relaxed mb-10" style="color: #5A7C6B;">Passionate guidance to help your charity grow stronger, reach further, and change more lives.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-color: #2D6A4F; color: #FDF8F4;">
+            Let's Talk <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border-2 transition-all duration-300 hover:scale-105" style="border-color: #2D6A4F; color: #2D6A4F;">
+            Learn More
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative aspect-square rounded-3xl overflow-hidden">
+          <img src="https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263486/Screenshot_20260323_105120_Gallery_rz6vmk.jpg" alt="Hannah" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-30" style="background-color: #2D6A4F;"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="offerings" class="py-20 md:py-28 px-6 relative">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: #D4A574;">Services</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: #1B3A2D;">What I Can Do For You</h2>
+    </div>
+    <div class="mb-12 mx-auto max-w-md">
+      <div class="relative aspect-square rounded-3xl overflow-hidden">
+        <img src="https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105405_Gallery_gjzeca.jpg" alt="Hannah at work" loading="lazy" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="fade-up grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="file-text" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Bid & Grant Writing</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Compelling applications that win funding and tell your story with impact.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="target" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Strategic Planning</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Developing roadmaps that align vision, values, and action for sustainable impact.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="trending-up" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Change Management</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Supporting your team through transitions with clarity, engagement, and confidence.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="clipboard-list" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Policy Reviews</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Reviewing and writing policies that strengthen governance and operational clarity.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="users" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Volunteer Support</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Building volunteer strategies that recruit, engage, and retain your most valuable people.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="users-round" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Community Engagement</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Creating meaningful connections with your community and stakeholders that drive lasting relationships.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="briefcase" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Project Management</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Delivering projects on time, on budget, and aligned with your charity's goals.</p>
+      </div>
+      
+      <div class="offering-card p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="lightbulb" style="width:22px;height:22px;color:#2D6A4F;"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: #1B3A2D;">Fundraising Strategy</h3>
+        <p class="text-sm leading-relaxed" style="color: #5A7C6B;">Building comprehensive fundraising frameworks that create sustainable income streams.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section id="about-me" class="py-20 md:py-28 px-6 relative">
+  <div class="absolute right-0 top-0 w-64 h-full dot-pattern opacity-5" style="color: #2D6A4F;"></div>
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: #D4A574;">My Journey</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-8" style="color: #1B3A2D;">What Made Me</h2>
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+        <div class="md:flex-1">
+          <div style="color: #5A7C6B; white-space: pre-line;">
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">Hi, I'm Hannah – welcome to my site!</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">Before working with someone, I think it's really important to get to know them. So here's a little about what's brought me here and why I care so much about what I do.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">My passion for charity and social enterprise started young. From organising Children in Need fundraisers (including some questionable fancy dress choices!) to putting together school events, newsletters and even our Year 11 prom – I've always loved bringing people together.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">As a teenager, I was heavily involved with Bradford Community Broadcasting (BCB), hosting a weekly radio show and supporting youth events in the community. That experience shaped my love for community work and gave me the confidence to connect with people from all walks of life.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">During my gap year, I spent time in Ghana working in a children's home – an experience that still means so much to me today. While there, I helped care for the children and, with support from people back home, raised over £1000 to provide much-needed beds, toys and equipment. It remains one of my proudest moments.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">Over the past 12 years, I've continued to channel this passion through organising charity events, fundraising initiatives and community activities. I've also been involved with Rotary, supporting projects such as Leeds Children's Charity at Lineham Farm, fundraising events and youth competitions.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">My professional background includes customer service, complaints, compliance and process improvement. After having my daughter, Poppy, in 2018, I set up my own photography business to create a better work/life balance – something I feel strongly about. I've built this into a successful, accessible business with over 200 five-star reviews.</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="margin-bottom: 1rem;">In 2020, I set up a Mutual Aid group in Brigg during the pandemic, supporting people with shopping and everyday essentials. This quickly grew into a food bank, which later became part of Oikos-Brigg, where I now serve as Food Bank Manager...</p>
+            
+            <p class="text-base md:text-lg leading-relaxed" style="">And that now leads me to the present.</p>
+            
+          </div>
+        </div>
+        <div class="md:w-96 md:flex-shrink-0">
+          <div class="relative sticky top-32">
+            <div class="w-full aspect-auto rounded-3xl overflow-hidden relative h-full">
+              <img src="https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105207_Gallery_fbbya8.jpg" alt="Hannah portrait" loading="lazy" class="w-full h-full object-contain">
+            </div>
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl" style="background-color: #D4A574; opacity: 0.3;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services" class="py-20 md:py-28 px-6" style="background-color: #1B3A2D;">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: #D4A574;">My Expertise</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: #FDF8F4;">All About What I Do</h2>
+      <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed" style="color: #9DB8AA;">I partner with charities to strengthen their foundations, sharpen their strategies, and unlock new possibilities for growth and impact.</p>
+    </div>
+    <div class="fade-up grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+      <div class="md:order-2">
+        <div class="relative aspect-square rounded-3xl overflow-hidden">
+          <img src="https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105147_Gallery_ccn7il.jpg" alt="Hannah working" loading="lazy" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="md:order-1">
+        <div class="space-y-4" style="color: #9DB8AA;">
+          
+          <p class="text-base leading-relaxed">I support charities, CICs, social enterprises and community groups to start, grow and thrive.</p>
+          
+          <p class="text-base leading-relaxed">My work focuses on project development, bid writing, community engagement and strengthening how organisations operate – helping turn ideas into sustainable, real-world impact.</p>
+          
+          <p class="text-base leading-relaxed">Alongside my consultancy, I'm hands-on in the sector. I manage a busy food bank and community projects supporting over 150 households each month, and work closely with partners to deliver practical, people-focused support.</p>
+          
+          <p class="text-base leading-relaxed">I'm Chair of The Wharfedale Foundation, a Parent Governor, and actively involved in local and youth initiatives. I also support organisations with funding, strategy and growth – including hospice work and emerging community projects.</p>
+          
+          <p class="text-base leading-relaxed">With a background in compliance, customer experience and process improvement, I bring structure, clarity and a results-focused approach – alongside a genuine passion for community and making things happen.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="fade-up grid md:grid-cols-3 gap-6">
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="target" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Strategic Planning</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Developing clear, actionable strategies that align your mission with measurable outcomes and long-term sustainability.</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="trending-up" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Fundraising & Bid Writing</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Building robust fundraising frameworks, compelling grant applications, and donor engagement strategies that deliver results.</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="users" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Change & Project Management</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Leading change initiatives and managing projects to deliver impact, ensuring your organisation evolves with purpose and clarity.</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="crown" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Leadership</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Building strong, visionary leadership that inspires teams and drives your organisation's mission forward with confidence and clarity.</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="handshake" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Community Building</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Creating meaningful connections and fostering engaged communities that feel valued, heard, and empowered to make a difference.</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background-color: rgba(212,165,116,0.2);">
+          <i data-lucide="sparkles" style="width:28px;height:28px;color:#D4A574;"></i>
+        </div>
+        <h3 class="font-heading text-xl mb-3" style="color: #FDF8F4;">Impact and Development</h3>
+        <p class="text-sm leading-relaxed" style="color: #9DB8AA;">Measuring and amplifying your charity's impact while supporting continuous growth and development across all areas of your work.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section id="current-work" class="py-20 md:py-28 px-6 relative" style="background-color: #E8F5EE;">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: #2D6A4F;">My Current Roles</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: #1B3A2D;">What I'm Currently Working On</h2>
+    </div>
+    <div class="fade-up grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="award" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Volunteer Chair of the Wharfedale Foundation</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="book-open" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Volunteer Parent Governor for local school</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="briefcase" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Project Manager for a Food & Social Project</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="heart-handshake" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Bid writer, project creation and community engagement for a local Hospice</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="leaf" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Volunteer Youth Worker for a Youth Environmental Group</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="map-pin" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Steering Group member and local champion for Brigg Locality</p>
+      </div>
+      
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: #FFFFFF; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: #E8F5EE;">
+          <i data-lucide="graduation-cap" style="width:24px;height:24px;color:#2D6A4F;"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: #1B3A2D;">Undertaking my Coaching Diploma – qualifying early 2027</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-20 md:py-28 px-6" style="background: linear-gradient(135deg, #2D6A4F 0%, #1B3A2D 100%);">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up grid md:grid-cols-2 gap-12 md:gap-20">
+      <div>
+        <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: #D4A574;">Get in Touch</span>
+        <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: #FDF8F4;">Let's Start a Conversation</h2>
+        <p class="text-base md:text-lg leading-relaxed mb-8" style="color: #9DB8AA;">Whether you've got a challenge in mind or you're just curious about how I could support you, feel free to reach out. I'm always up for a friendly chat!</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: rgba(212,165,116,0.2);">
+              <i data-lucide="mail" style="width:18px;height:18px;color:#D4A574;"></i>
+            </div>
+            <a href="mailto:hannah.socialsector@gmail.com" class="text-sm" style="color: #C8DCD0; text-decoration: none;">hannah.socialsector@gmail.com</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: rgba(212,165,116,0.2);">
+              <i data-lucide="phone" style="width:18px;height:18px;color:#D4A574;"></i>
+            </div>
+            <a href="tel:07746006033" class="text-sm" style="color: #C8DCD0; text-decoration: none;">07746 006033</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <a href="mailto:hannah.socialsector@gmail.com" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-color: #D4A574; color: #1B3A2D;">
+          Drop me an email <i data-lucide="mail" style="width:20px;height:20px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="py-8 px-6" style="background-color: #152E22;">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background-color: #2D6A4F;">
+        <i data-lucide="heart-handshake" style="width:16px;height:16px;color:#FDF8F4;"></i>
+      </div>
+      <span class="font-heading text-sm" style="color: #9DB8AA;">Charity Consultancy</span>
+    </div>
+    <p class="text-xs" style="color: #5A7C6B;">&copy; 2025 All rights reserved. Made with purpose.</p>
+  </div>
+</footer>
+
+  </div>
+  <script>
+    document.getElementById('mobile-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(function(el) {
+      observer.observe(el);
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>

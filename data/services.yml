@@ -1,0 +1,30 @@
+section_label: My Expertise
+title: All About What I Do
+subtitle: I partner with charities to strengthen their foundations, sharpen their strategies, and unlock new possibilities for growth and impact.
+
+description_paragraphs:
+  - "I support charities, CICs, social enterprises and community groups to start, grow and thrive."
+  - "My work focuses on project development, bid writing, community engagement and strengthening how organisations operate – helping turn ideas into sustainable, real-world impact."
+  - "Alongside my consultancy, I'm hands-on in the sector. I manage a busy food bank and community projects supporting over 150 households each month, and work closely with partners to deliver practical, people-focused support."
+  - "I'm Chair of The Wharfedale Foundation, a Parent Governor, and actively involved in local and youth initiatives. I also support organisations with funding, strategy and growth – including hospice work and emerging community projects."
+  - "With a background in compliance, customer experience and process improvement, I bring structure, clarity and a results-focused approach – alongside a genuine passion for community and making things happen."
+
+services:
+  - icon: target
+    title: Strategic Planning
+    description: Developing clear, actionable strategies that align your mission with measurable outcomes and long-term sustainability.
+  - icon: trending-up
+    title: Fundraising & Bid Writing
+    description: Building robust fundraising frameworks, compelling grant applications, and donor engagement strategies that deliver results.
+  - icon: users
+    title: Change & Project Management
+    description: Leading change initiatives and managing projects to deliver impact, ensuring your organisation evolves with purpose and clarity.
+  - icon: crown
+    title: Leadership
+    description: Building strong, visionary leadership that inspires teams and drives your organisation's mission forward with confidence and clarity.
+  - icon: handshake
+    title: Community Building
+    description: Creating meaningful connections and fostering engaged communities that feel valued, heard, and empowered to make a difference.
+  - icon: sparkles
+    title: Impact and Development
+    description: Measuring and amplifying your charity's impact while supporting continuous growth and development across all areas of your work.

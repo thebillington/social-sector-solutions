@@ -1,0 +1,28 @@
+section_label: Services
+title: What I Can Do For You
+
+offerings:
+  - icon: file-text
+    title: Bid & Grant Writing
+    description: Compelling applications that win funding and tell your story with impact.
+  - icon: target
+    title: Strategic Planning
+    description: Developing roadmaps that align vision, values, and action for sustainable impact.
+  - icon: trending-up
+    title: Change Management
+    description: Supporting your team through transitions with clarity, engagement, and confidence.
+  - icon: clipboard-list
+    title: Policy Reviews
+    description: Reviewing and writing policies that strengthen governance and operational clarity.
+  - icon: users
+    title: Volunteer Support
+    description: Building volunteer strategies that recruit, engage, and retain your most valuable people.
+  - icon: users-round
+    title: Community Engagement
+    description: Creating meaningful connections with your community and stakeholders that drive lasting relationships.
+  - icon: briefcase
+    title: Project Management
+    description: Delivering projects on time, on budget, and aligned with your charity's goals.
+  - icon: lightbulb
+    title: Fundraising Strategy
+    description: Building comprehensive fundraising frameworks that create sustainable income streams.

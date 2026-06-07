@@ -1,0 +1,18 @@
+<section id="current-work" class="py-20 md:py-28 px-6 relative" style="background-color: {{ site.colors.light_green }};">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: {{ site.colors.primary }};">{{ current_work.section_label }}</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: {{ site.colors.text_dark }};">{{ current_work.title }}</h2>
+    </div>
+    <div class="fade-up grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      {% for role in current_work.roles %}
+      <div class="p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style="background-color: {{ site.colors.surface }}; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: {{ site.colors.light_green }};">
+          <i data-lucide="{{ role.icon }}" style="width:24px;height:24px;color:{{ site.colors.primary }};"></i>
+        </div>
+        <p class="text-base font-medium leading-relaxed" style="color: {{ site.colors.text_dark }};">{{ role.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

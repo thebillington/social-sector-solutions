@@ -1,0 +1,24 @@
+<section id="offerings" class="py-20 md:py-28 px-6 relative">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: {{ site.colors.accent }};">{{ offerings.section_label }}</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: {{ site.colors.text_dark }};">{{ offerings.title }}</h2>
+    </div>
+    <div class="mb-12 mx-auto max-w-md">
+      <div class="relative aspect-square rounded-3xl overflow-hidden">
+        <img src="{{ site.images.offerings_photo }}" alt="Hannah at work" loading="lazy" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="fade-up grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {% for offering in offerings.offerings %}
+      <div class="offering-card p-6 rounded-2xl" style="background-color: {{ site.colors.surface }}; box-shadow: 0 4px 24px rgba(27,58,45,0.06);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: {{ site.colors.light_green }};">
+          <i data-lucide="{{ offering.icon }}" style="width:22px;height:22px;color:{{ site.colors.primary }};"></i>
+        </div>
+        <h3 class="font-heading text-lg mb-2" style="color: {{ site.colors.text_dark }};">{{ offering.title }}</h3>
+        <p class="text-sm leading-relaxed" style="color: {{ site.colors.text_mid }};">{{ offering.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

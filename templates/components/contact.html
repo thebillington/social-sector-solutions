@@ -1,0 +1,30 @@
+<section id="contact" class="py-20 md:py-28 px-6" style="background: linear-gradient(135deg, {{ site.colors.contact_gradient_from }} 0%, {{ site.colors.contact_gradient_to }} 100%);">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up grid md:grid-cols-2 gap-12 md:gap-20">
+      <div>
+        <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: {{ site.colors.accent }};">{{ contact.section_label }}</span>
+        <h2 class="font-heading text-3xl md:text-5xl mb-6" style="color: {{ site.colors.background }};">{{ contact.title }}</h2>
+        <p class="text-base md:text-lg leading-relaxed mb-8" style="color: {{ site.colors.text_light }};">{{ contact.subtitle }}</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: rgba(212,165,116,0.2);">
+              <i data-lucide="mail" style="width:18px;height:18px;color:{{ site.colors.accent }};"></i>
+            </div>
+            <a href="mailto:{{ site.contact.email }}" class="text-sm" style="color: #C8DCD0; text-decoration: none;">{{ site.contact.email }}</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: rgba(212,165,116,0.2);">
+              <i data-lucide="phone" style="width:18px;height:18px;color:{{ site.colors.accent }};"></i>
+            </div>
+            <a href="tel:{{ site.contact.phone }}" class="text-sm" style="color: #C8DCD0; text-decoration: none;">{{ site.contact.phone_display }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <a href="mailto:{{ site.contact.email }}" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-color: {{ site.colors.accent }}; color: {{ site.colors.text_dark }};">
+          {{ contact.cta_label }} <i data-lucide="mail" style="width:20px;height:20px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

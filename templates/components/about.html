@@ -1,0 +1,26 @@
+<section id="about-me" class="py-20 md:py-28 px-6 relative">
+  <div class="absolute right-0 top-0 w-64 h-full dot-pattern opacity-5" style="color: {{ site.colors.primary }};"></div>
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up">
+      <span class="text-xs font-bold tracking-widest uppercase mb-3 block" style="color: {{ site.colors.accent }};">{{ about.section_label }}</span>
+      <h2 class="font-heading text-3xl md:text-5xl mb-8" style="color: {{ site.colors.text_dark }};">{{ about.title }}</h2>
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+        <div class="md:flex-1">
+          <div style="color: {{ site.colors.text_mid }}; white-space: pre-line;">
+            {% for paragraph in about.paragraphs %}
+            <p class="text-base md:text-lg leading-relaxed" style="{% if not loop.last %}margin-bottom: 1rem;{% endif %}">{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="md:w-96 md:flex-shrink-0">
+          <div class="relative sticky top-32">
+            <div class="w-full aspect-auto rounded-3xl overflow-hidden relative h-full">
+              <img src="{{ site.images.about_photo }}" alt="Hannah portrait" loading="lazy" class="w-full h-full object-contain">
+            </div>
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl" style="background-color: {{ site.colors.accent }}; opacity: 0.3;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

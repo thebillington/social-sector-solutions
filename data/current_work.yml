@@ -1,0 +1,18 @@
+section_label: My Current Roles
+title: What I'm Currently Working On
+
+roles:
+  - icon: award
+    description: Volunteer Chair of the Wharfedale Foundation
+  - icon: book-open
+    description: Volunteer Parent Governor for local school
+  - icon: briefcase
+    description: Project Manager for a Food & Social Project
+  - icon: heart-handshake
+    description: Bid writer, project creation and community engagement for a local Hospice
+  - icon: leaf
+    description: Volunteer Youth Worker for a Youth Environmental Group
+  - icon: map-pin
+    description: Steering Group member and local champion for Brigg Locality
+  - icon: graduation-cap
+    description: Undertaking my Coaching Diploma – qualifying early 2027

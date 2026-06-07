@@ -1,0 +1,33 @@
+<header class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 overflow-hidden">
+  <div class="absolute top-20 right-0 w-72 h-72 blob-shape opacity-20" style="background-color: {{ site.colors.primary }};"></div>
+  <div class="absolute bottom-0 left-10 w-40 h-40 blob-shape opacity-10" style="background-color: {{ site.colors.accent }};"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="max-w-2xl">
+        <div class="mb-8 flex justify-start">
+          <img src="{{ site.images.logo }}" alt="{{ site.title }} Logo" loading="lazy" style="height: 120px; width: auto;">
+        </div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style="background-color: {{ site.colors.light_green }}; color: {{ site.colors.primary }};">
+          <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+          <span class="text-xs font-semibold tracking-wide uppercase">{{ hero.badge }}</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-6xl leading-tight mb-6" style="color: {{ site.colors.text_dark }};">{{ hero.title }}</h1>
+        <p class="text-lg md:text-xl leading-relaxed mb-10" style="color: {{ site.colors.text_mid }};">{{ hero.subtitle }}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="{{ hero.primary_cta.href }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-color: {{ site.colors.primary }}; color: {{ site.colors.background }};">
+            {{ hero.primary_cta.label }} <i data-lucide="{{ hero.primary_cta.icon }}" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="{{ hero.secondary_cta.href }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border-2 transition-all duration-300 hover:scale-105" style="border-color: {{ site.colors.primary }}; color: {{ site.colors.primary }};">
+            {{ hero.secondary_cta.label }}
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative aspect-square rounded-3xl overflow-hidden">
+          <img src="{{ site.images.hero_photo }}" alt="Hannah" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-30" style="background-color: {{ site.colors.primary }};"></div>
+      </div>
+    </div>
+  </div>
+</header>

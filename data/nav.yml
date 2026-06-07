@@ -1,0 +1,12 @@
+links:
+  - label: What Made Me
+    href: "#about-me"
+  - label: What I Do
+    href: "#services"
+  - label: Currently Working On
+    href: "#current-work"
+  - label: What I Can Do
+    href: "#offerings"
+cta:
+  label: Get in Touch
+  href: "#contact"

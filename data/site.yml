@@ -1,0 +1,32 @@
+title: Social Sector Solutions with Hannah
+description: Charity Consultancy
+base_url: https://socialsectorsolutions.co.uk
+
+colors:
+  background: "#FDF8F4"
+  surface: "#FFFFFF"
+  text_dark: "#1B3A2D"
+  text_mid: "#5A7C6B"
+  text_light: "#9DB8AA"
+  primary: "#2D6A4F"
+  accent: "#D4A574"
+  light_green: "#E8F5EE"
+  dark_bg: "#152E22"
+  contact_gradient_from: "#2D6A4F"
+  contact_gradient_to: "#1B3A2D"
+
+fonts:
+  heading: DM Serif Display
+  body: Plus Jakarta Sans
+
+images:
+  logo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774262526/Social_sector_solutions_with_Hannah_logo_netwfb.png
+  hero_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263486/Screenshot_20260323_105120_Gallery_rz6vmk.jpg
+  about_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105207_Gallery_fbbya8.jpg
+  services_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105147_Gallery_ccn7il.jpg
+  offerings_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105405_Gallery_gjzeca.jpg
+
+contact:
+  email: hannah.socialsector@gmail.com
+  phone: "07746006033"
+  phone_display: "07746 006033"
