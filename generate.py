@@ -35,6 +35,12 @@ def main():
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     (OUTPUT / "index.html").write_text(html)
+
+    for f in ["favicon.ico", "favicon.png"]:
+        src = ROOT / f
+        if src.exists():
+            (OUTPUT / f).write_bytes(src.read_bytes())
+
     print(f"Generated {OUTPUT / 'index.html'}")
 
 if __name__ == "__main__":
