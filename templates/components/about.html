@@ -6,7 +6,7 @@
       <h2 class="font-heading text-3xl md:text-5xl mb-8" style="color: {{ site.colors.text_dark }};">{{ about.title }}</h2>
       <div class="flex flex-col md:flex-row gap-8 md:gap-12">
         <div class="md:flex-1">
-          <div style="color: {{ site.colors.text_mid }}; white-space: pre-line;">
+          <div style="color: {{ site.colors.text_mid }};">
             {% for paragraph in about.paragraphs %}
             <p class="text-base leading-relaxed" style="margin-bottom: 1rem;">{{ paragraph }}</p>
             {% endfor %}
