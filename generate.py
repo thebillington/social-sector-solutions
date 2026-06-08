@@ -41,6 +41,13 @@ def main():
         if src.exists():
             (OUTPUT / f).write_bytes(src.read_bytes())
 
+    IMAGES = ROOT / "images"
+    if IMAGES.exists():
+        dst = OUTPUT / "images"
+        dst.mkdir(exist_ok=True)
+        for img in IMAGES.iterdir():
+            (dst / img.name).write_bytes(img.read_bytes())
+
     print(f"Generated {OUTPUT / 'index.html'}")
 
 if __name__ == "__main__":

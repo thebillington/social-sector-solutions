@@ -15,14 +15,14 @@
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
   <meta property="og:url" content="{{ site.base_url }}">
-  <meta property="og:image" content="{{ site.og_image }}">
+  <meta property="og:image" content="{{ site.base_url }}{{ site.og_image }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="en_GB">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ site.title }}">
   <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:image" content="{{ site.og_image }}">
+  <meta name="twitter:image" content="{{ site.base_url }}{{ site.og_image }}">
 
   <script type="application/ld+json">
   {
@@ -31,7 +31,7 @@
     "name": "{{ site.title }}",
     "description": {{ site.description | tojson }},
     "url": "{{ site.base_url }}",
-    "image": "{{ site.og_image }}",
+    "image": "{{ site.base_url }}{{ site.og_image }}",
     "email": "{{ site.contact.email }}",
     "telephone": "{{ site.contact.phone }}"
   }

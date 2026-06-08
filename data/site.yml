@@ -2,7 +2,7 @@ title: Social Sector Solutions with Hannah
 brand: Charity Consultancy
 description: Charity consultancy helping charities thrive - bid and grant writing, strategic planning, change management, policy reviews, and community engagement.
 base_url: https://socialsectorsolutions.co.uk
-og_image: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774262526/Social_sector_solutions_with_Hannah_logo_netwfb.png
+og_image: /images/logo.png
 
 colors:
   background: "#FDF8F4"
@@ -22,11 +22,11 @@ fonts:
   body: Plus Jakarta Sans
 
 images:
-  logo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774262526/Social_sector_solutions_with_Hannah_logo_netwfb.png
-  hero_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263486/Screenshot_20260323_105120_Gallery_rz6vmk.jpg
-  about_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105207_Gallery_fbbya8.jpg
-  services_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105147_Gallery_ccn7il.jpg
-  offerings_photo: https://res.cloudinary.com/drzhhb3qn/image/upload/v1774263487/Screenshot_20260323_105405_Gallery_gjzeca.jpg
+  logo: /images/logo.png
+  hero_photo: /images/hero.jpg
+  about_photo: /images/about.jpg
+  services_photo: /images/services.jpg
+  offerings_photo: /images/offerings.jpg
 
 contact:
   email: hannah.socialsector@gmail.com
