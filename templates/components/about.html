@@ -8,7 +8,7 @@
         <div class="md:flex-1">
           <div style="color: {{ site.colors.text_mid }}; white-space: pre-line;">
             {% for paragraph in about.paragraphs %}
-            <p class="text-base md:text-lg leading-relaxed" style="{% if not loop.last %}margin-bottom: 1rem;{% endif %}">{{ paragraph }}</p>
+            <p class="text-base leading-relaxed" style="margin-bottom: 1rem;">{{ paragraph }}</p>
             {% endfor %}
           </div>
         </div>

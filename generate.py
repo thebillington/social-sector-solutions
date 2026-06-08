@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from datetime import datetime
 import yaml
 from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
@@ -29,6 +30,7 @@ def main():
     env = Environment(loader=FileSystemLoader(TEMPLATES))
     template = env.get_template("index.html")
 
+    context["current_year"] = datetime.now().year
     html = template.render(**context)
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
